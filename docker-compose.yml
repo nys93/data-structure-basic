@@ -6,9 +6,21 @@ services:
 #      - ./hello:/src/hello
 #    working_dir: /src/hello
 #    command: ./build.sh
-  hello:
+#  one_way_linked_list:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./one_way_linked_list:/src/one_way_linked_list
+#    working_dir: /src/one_way_linked_list
+#    command: ./build.sh
+#    doubly_linked_list:
+#        image: 'gcc:9.2'
+#        volumes:
+#            - ./doubly_linked_list:/src/doubly_linked_list
+#        working_dir: /src/doubly_linked_list
+#        command: ./build.sh
+  stack_array:
     image: 'gcc:9.2'
     volumes:
-      - ./one_way_linked_list:/src/one_way_linked_list
-    working_dir: /src/one_way_linked_list
+      - ./stack_array:/src/stack_array
+    working_dir: /src/stack_array
     command: ./build.sh
