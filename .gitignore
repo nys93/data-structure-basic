@@ -30,5 +30,7 @@
 *.exe
 *.out
 *.app
-*.exec
 
+# Custom
+.DS_Store
+.idea

@@ -36,9 +36,28 @@ services:
 #      - ./queue_array:/src/queue_array
 #    working_dir: /src/queue_array
 #    command: ./build.sh
-  queue_linked_list:
+#  queue_linked_list:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./queue_linked_list:/src/queue_linked_list
+#    working_dir: /src/queue_linked_list
+#    command: ./build.sh
+#  selection_sort:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./selection_sort:/src/selection_sort
+#    working_dir: /src/selection_sort
+#    command: ./build.sh
+#    insertion_sort:
+#      image: 'gcc:9.2'
+#      volumes:
+#        - ./insertion_sort:/src/insertion_sort
+#      working_dir: /src/insertion_sort
+#      command: ./build.sh
+  quick_sort:
     image: 'gcc:9.2'
     volumes:
-      - ./queue_linked_list:/src/queue_linked_list
-    working_dir: /src/queue_linked_list
+      - ./quick_sort:/src/quick_sort
+    working_dir: /src/quick_sort
     command: ./build.sh
+
