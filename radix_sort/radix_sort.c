@@ -12,12 +12,12 @@ void radixSort(int *a, int n) {
 
     while (maxValue / exp > 0) {
         int bucket[10] = { 0 };
-        for (int i = 0; i < n; i++) bucket[a[i] / exp % 10] ++; //자릿수 배열 처리
-        for (int i = 1; i < 10; i++) bucket[i] += bucket[i -1]; //누적 계산
-        for (int i = n - 1; i >= 0; i--){ //같은 자릿수 기리는 순서를 유지
+        for (int i = 0; i < n; i++) bucket[a[i] / exp % 10] ++; //array out of place value
+        for (int i = 1; i < 10; i++) bucket[i] += bucket[i -1]; //Cumulative Calculation
+        for (int i = n - 1; i >= 0; i--){ //Keep order if the number has same place value
           res[--bucket[a[i] / exp % 10]] = a[i];
         }
-        for (int i = 0; i < n; i++) a[i] = res[i]; // 기본 배열 갱신
+        for (int i = 0; i < n; i++) a[i] = res[i]; //Update default array
         exp *= 10;
 
     }
