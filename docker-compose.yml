@@ -54,10 +54,23 @@ services:
 #        - ./insertion_sort:/src/insertion_sort
 #      working_dir: /src/insertion_sort
 #      command: ./build.sh
-  quick_sort:
+#  quick_sort:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./quick_sort:/src/quick_sort
+#    working_dir: /src/quick_sort
+#    command: ./build.sh
+#  counting_sort:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./counting_sort:/src/counting_sort
+#    working_dir: /src/counting_sort
+#    command: ./build.sh
+  radix_sort:
     image: 'gcc:9.2'
     volumes:
-      - ./quick_sort:/src/quick_sort
-    working_dir: /src/quick_sort
+      - ./radix_sort:/src/radix_sort
+    working_dir: /src/radix_sort
     command: ./build.sh
+
 
