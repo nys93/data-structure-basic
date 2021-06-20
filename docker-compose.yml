@@ -66,11 +66,17 @@ services:
 #      - ./counting_sort:/src/counting_sort
 #    working_dir: /src/counting_sort
 #    command: ./build.sh
-  radix_sort:
+#  radix_sort:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./radix_sort:/src/radix_sort
+#    working_dir: /src/radix_sort
+#    command: ./build.sh
+  sequential_search:
     image: 'gcc:9.2'
     volumes:
-      - ./radix_sort:/src/radix_sort
-    working_dir: /src/radix_sort
+      - ./sequential_search:/src/sequential_search
+    working_dir: /src/sequential_search
     command: ./build.sh
 
 
