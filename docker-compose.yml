@@ -72,11 +72,23 @@ services:
 #      - ./radix_sort:/src/radix_sort
 #    working_dir: /src/radix_sort
 #    command: ./build.sh
-  sequential_search:
+#  sequential_search:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./sequential_search:/src/sequential_search
+#    working_dir: /src/sequential_search
+#    command: ./build.sh
+#  avl_tree:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./avl_tree:/src/avl_tree
+#    working_dir: /src/avl_tree
+#    command: ./build.sh
+  binary_search_tree:
     image: 'gcc:9.2'
     volumes:
-      - ./sequential_search:/src/sequential_search
-    working_dir: /src/sequential_search
+      - ./binary_search_tree:/src/binary_search_tree
+    working_dir: /src/binary_search_tree
     command: ./build.sh
 
 
