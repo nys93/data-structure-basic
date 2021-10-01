@@ -96,11 +96,17 @@ services:
 #      - ./chaining_hash_table:/src/chaining_hash_table
 #    working_dir: /src/chaining_hash_table
 #    command: ./build.sh
-  breadth_first_search:
-    image: 'gcc:9.2'
-    volumes:
-      - ./breadth_first_search:/src/breadth_first_search
-    working_dir: /src/breadth_first_search
-    command: ./build.sh
+#  breadth_first_search:
+#    image: 'gcc:9.2'
+#    volumes:
+#      - ./breadth_first_search:/src/breadth_first_search
+#    working_dir: /src/breadth_first_search
+#    command: ./build.sh
+    prims_algorithm:
+        image: 'gcc:9.2'
+        volumes:
+            - ./prims_algorithm:/src/prims_algorithm
+        working_dir: /src/prims_algorithm
+        command: ./build.sh
 
 
