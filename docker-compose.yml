@@ -102,11 +102,17 @@ services:
 #      - ./breadth_first_search:/src/breadth_first_search
 #    working_dir: /src/breadth_first_search
 #    command: ./build.sh
-    prims_algorithm:
+#    prims_algorithm:
+#        image: 'gcc:9.2'
+#        volumes:
+#            - ./prims_algorithm:/src/prims_algorithm
+#        working_dir: /src/prims_algorithm
+#        command: ./build.sh
+    dijkstra_algorithm:
         image: 'gcc:9.2'
         volumes:
-            - ./prims_algorithm:/src/prims_algorithm
-        working_dir: /src/prims_algorithm
+            - ./dijkstra_algorithm:/src/dijkstra_algorithm
+        working_dir: /src/dijkstra_algorithm
         command: ./build.sh
 
 
